@@ -1,0 +1,53 @@
+# robots.txt for https://claytonvantol.us/
+# RFC 9309 compliant — https://www.rfc-editor.org/rfc/rfc9309
+
+# Allow all compliant crawlers full access
+User-agent: *
+Allow: /
+Disallow: /404
+Disallow: /error
+
+# Google (Search, Images, News, Video)
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+# Bing / Microsoft
+User-agent: Bingbot
+Allow: /
+
+# Apple
+User-agent: Applebot
+Allow: /
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+
+# Yandex
+User-agent: YandexBot
+Allow: /
+
+# Block AI training crawlers (not search indexers)
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: omgilibot
+Disallow: /
+
+User-agent: FacebookBot
+Disallow: /
+
+# Sitemap location
+Sitemap: https://claytonvantol.us/sitemap.xml
