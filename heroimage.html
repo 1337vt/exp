@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Referrals - Clayton VanTol</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            width: 1200px;
+            height: 630px;
+            font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 900px;
+        }
+        .left {
+            flex: 1;
+        }
+        .badge {
+            display: inline-block;
+            background: #c9a227;
+            color: #1e3a5f;
+            padding: 10px 24px;
+            border-radius: 2px;
+            font-size: 15px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 22px;
+        }
+        .title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 68px;
+            font-weight: 700;
+            color: #ffffff;
+            line-height: 1.1;
+            margin-bottom: 14px;
+        }
+        .title span {
+            color: #c9a227;
+        }
+        .subtitle {
+            font-size: 28px;
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 34px;
+            max-width: 520px;
+        }
+        .contact {
+            display: flex;
+            gap: 40px;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: rgba(255,255,255,0.8);
+            font-size: 20px;
+        }
+        .contact-item svg {
+            width: 24px;
+            height: 24px;
+            fill: #c9a227;
+        }
+        .right {
+            flex-shrink: 0;
+            margin-left: 20px;
+        }
+        .logo-box {
+            width: 200px;
+            height: 200px;
+            background: #faf8f5;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+        .exp-text {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 52px;
+            font-weight: 700;
+            color: #1e3a5f;
+            line-height: 1;
+        }
+        .exp-text span {
+            color: #c9a227;
+        }
+        .tagline {
+            margin-top: 14px;
+            font-size: 14px;
+            color: rgba(255,255,255,0.6);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="badge">Trusted Referrals</div>
+            <h1 class="title">Real Estate<br><span>Referrals</span></h1>
+            <p class="subtitle">Get matched with vetted local eXp agents</p>
+            <div class="contact">
+                <div class="contact-item">
+                    <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                    <span>210-920-4449</span>
+                </div>
+                <div class="contact-item">
+                    <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    <span>clayton.vantol@expreferral.com</span>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="logo-box">
+                <div class="exp-text"><span>eXp</span></div>
+            </div>
+            <div class="tagline">Real Estate Referrals</div>
+        </div>
+    </div>
+</body>
+</html>
