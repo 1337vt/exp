@@ -315,8 +315,13 @@
         .contact-card {
             text-align: center;
             padding: 2rem;
+            gap: 0.25rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;   /* horizontal center */
+            justify-content: center; /* vertical alignment if needed */
         }
-        
+  
         .contact-card a {
             color: var(--navy);
             text-decoration: none;
@@ -341,6 +346,8 @@
             margin: 0;
             font-size: 0.9rem;
         }
+
+        
         
         .disclaimer {
             background: var(--gray-100);
@@ -543,13 +550,13 @@
     <!-- Contact Section -->
     <section class="contact-section">
         <div class="container">
-            <div class="row g-4">
+            <div class="row g-5">
                 <div class="col-md-4">
                     <div class="contact-card">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
                         </svg>
-                        <br><a href="tel:210-920-4449">210-920-4449</a>
+                        <a href="tel:210-920-4449">210-920-4449</a>
                         <p>Phone</p>
                     </div>
                 </div>
@@ -559,7 +566,7 @@
                             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
                             <polyline points="22,6 12,13 2,6"/>
                         </svg>
-                        <br><a href="mailto:clayton.vantol@expreferral.com">clayton.vantol@expreferral.com</a>
+                        <a href="mailto:clayton.vantol@expreferral.com">clayton.vantol@expreferral.com</a>
                         <p>Email</p>
                     </div>
                 </div>
@@ -570,7 +577,7 @@
                             <polyline points="14 2 14 8 20 8"/>
                             <line x1="9" y1="15" x2="15" y2="15"/>
                         </svg>
-                        <br><p class="mb-0">License #846415-SA</p>
+                        <p class="mb-0">License #846415-SA</p>
                         <p>Texas Real Estate</p>
                     </div>
                 </div>
