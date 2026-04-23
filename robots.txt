@@ -7,6 +7,10 @@ Allow: /
 Disallow: /404
 Disallow: /error
 
+# Facebook
+User-agent: facebookexternalhit
+Allow: /
+
 # Google (Search, Images, News, Video)
 User-agent: Googlebot
 Allow: /
