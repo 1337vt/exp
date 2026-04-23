@@ -1,28 +1,30 @@
 # robots.txt for https://claytonvantol.us/
 # RFC 9309 compliant — https://www.rfc-editor.org/rfc/rfc9309
 
-# Allow all compliant crawlers full access
+# -------------------------------------------------------
+# DEFAULT: Allow all compliant crawlers
+# -------------------------------------------------------
 User-agent: *
 Allow: /
 Disallow: /404
 Disallow: /error
 
-# Facebook
-User-agent: facebookexternalhit
-Allow: /
+# -------------------------------------------------------
+# SEARCH ENGINES
+# -------------------------------------------------------
 
-# Google (Search, Images, News, Video)
+# Google
 User-agent: Googlebot
 Allow: /
 
 User-agent: Googlebot-Image
 Allow: /
 
-# Bing / Microsoft
+# Microsoft / Bing
 User-agent: Bingbot
 Allow: /
 
-# Apple
+# Apple (Spotlight, Siri Suggestions, Safari)
 User-agent: Applebot
 Allow: /
 
@@ -30,28 +32,105 @@ Allow: /
 User-agent: DuckDuckBot
 Allow: /
 
+# Yahoo
+User-agent: Slurp
+Allow: /
+
 # Yandex
 User-agent: YandexBot
 Allow: /
 
-# Block AI training crawlers (not search indexers)
+# Baidu
+User-agent: Baiduspider
+Allow: /
+
+# -------------------------------------------------------
+# SOCIAL MEDIA PREVIEW CRAWLERS
+# Required for correct link previews when URL is shared
+# -------------------------------------------------------
+
+# Facebook / Instagram (link previews)
+User-agent: facebookexternalhit
+Allow: /
+
+# Twitter / X (link previews)
+User-agent: Twitterbot
+Allow: /
+
+# LinkedIn (link previews)
+User-agent: LinkedInBot
+Allow: /
+
+# Pinterest (link previews)
+User-agent: Pinterest
+Allow: /
+
+# Slack (link unfurls)
+User-agent: Slackbot
+Allow: /
+
+# WhatsApp (link previews)
+User-agent: WhatsApp
+Allow: /
+
+# Telegram (link previews)
+User-agent: TelegramBot
+Allow: /
+
+# -------------------------------------------------------
+# SEO AUDIT TOOLS
+# Useful for backlink and keyword tracking
+# -------------------------------------------------------
+User-agent: AhrefsBot
+Allow: /
+
+User-agent: SemrushBot
+Allow: /
+
+User-agent: MJ12bot
+Allow: /
+
+# -------------------------------------------------------
+# AI SEARCH CRAWLERS (discovery/answers — not training)
+# -------------------------------------------------------
+
+# Perplexity AI search
+User-agent: PerplexityBot
+Allow: /
+
+# OpenAI search product (distinct from GPTBot training crawler)
+User-agent: OAI-SearchBot
+Allow: /
+
+# -------------------------------------------------------
+# AI TRAINING CRAWLERS — BLOCKED
+# These crawlers collect content for model training,
+# not for indexing or search visibility
+# -------------------------------------------------------
+
+# OpenAI training
 User-agent: GPTBot
 Disallow: /
 
+# Anthropic training
 User-agent: ClaudeBot
 Disallow: /
 
 User-agent: anthropic-ai
 Disallow: /
 
+# Common Crawl (bulk training datasets)
 User-agent: CCBot
+Disallow: /
+
+# Facebook AI training (distinct from facebookexternalhit)
+User-agent: FacebookBot
 Disallow: /
 
 User-agent: omgilibot
 Disallow: /
 
-User-agent: FacebookBot
-Disallow: /
-
-# Sitemap location
+# -------------------------------------------------------
+# SITEMAP
+# -------------------------------------------------------
 Sitemap: https://claytonvantol.us/sitemap.xml
