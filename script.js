@@ -145,8 +145,25 @@ function buildFormData(responseId) {
 
 async function submitToGoogleForms(data) {
     const formId = "1FAIpQLSdnYkUdPaC0XdOLla_bC2cyAl84WABeC0K2lHM78Mkdi0UPZQ";
-    const formUrl = `https://docs.google.com/forms/d/${formId}/formResponse`;
+    const formUrl = `https://docs.google.com/forms/d/e/${formId}/formResponse`;
     
+    
+    // entry.1278468536=I+consent+to+my+contact+details+being+shared+with+an+eXp+Realty+agent+for+the+purpose+of+matching+me+to+real+estate+services.
+    // &entry.2005620554=first
+    // &entry.420547383=last
+    // &entry.1564509049=email@email.com
+    // &entry.1166974658=210-555-5555
+    // &entry.723752976=Buy
+    // &entry.1755331071=Less+than+30+days
+    // &entry.503258246=Cash
+    // &entry.1416531690=Less+than+$200,000
+    // &entry.719461200=Single-family+home
+    // &entry.1438595406=12345
+    // &entry.2055121868=SA,+TX
+    // &entry.2048689274=Text
+    // &entry.691597351=Morning
+    // &entry.1496963227=Facebook
+
     const entryMap = {
         'First Name': 'entry.2005620554',
         'Last Name': 'entry.420547383',
