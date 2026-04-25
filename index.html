@@ -1003,7 +1003,8 @@
                         </div>
                         <div class="btn-row">
                             <button type="button" class="btn btn-secondary" onclick="prevStep(8)">Back</button>
-                            <button type="button" class="btn btn-primary" id="btn8" onclick="submitForm()">Get Matched!</button>
+                            <!--Facebook Lead Tracking added inline to button's onclick-->
+                            <button type="button" class="btn btn-primary" id="btn8" onclick="fbq('track', 'Lead'); submitForm()">Get Matched!</button>
                         </div>
                     </div>
 
@@ -1012,7 +1013,7 @@
                         <div class="success-step">
                             <div class="result-icon">✓</div>
                             <h2>You're All Set!</h2>
-                            <p>You have successfully requested to be connected with a real estate professional!  This information comes directly to me.  As soon as I review the information provided, I will reach out to you using your selected communication method to address any information gaps and get you connected to someone who can best help in your situation.</p>
+                            <p>You have successfully requested to be connected with a real estate professional!  This information comes directly to me.  As soon as I review the information provided, I will reach out to you using your selected communication method to address any information gaps and get you connected to someone who can best help in your situation.  If for some reason, I do not reach out quickly or if you need immediate assistance, please personally email me at clayton.vantol@expreferral.com and I will immediately start working to find you an agent who can help.</p>
                             <p style="margin-top: 20px; font-size: 0.9rem; color: var(--gray-500);">Response ID: <span id="responseId"></span></p>
                             <button type="button" class="btn btn-primary" onclick="startOver()">Back to the start</button>
 
@@ -1086,6 +1087,9 @@
     <script src="script.js"></script>
     <script>
         function startFunnel() {
+            // Facebook Tracking Start
+            fbq('track', 'InitiateCheckout');
+            // Facebook Tracking End
             // Hide landing sections
             document.querySelectorAll('.landing-section').forEach(function(section) {
                 section.style.display = 'none';
