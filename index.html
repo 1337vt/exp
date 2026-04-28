@@ -195,7 +195,13 @@
             color: var(--navy);
         }
 
-        /* BUTTONS */
+        .hero-action-btn {
+            display: inline-block;
+        }
+        
+        .hero-action-btn.hidden {
+            display: none;
+        }
         .btn-gold {
             background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
             color: var(--navy);
@@ -644,7 +650,7 @@
     </style>
 </head>
 <body>
-    <!-- PAGE HERO SECTION -->
+    <!-- #region PAGE HERO SECTION -->
     <section class="page-hero">
         <div class="container hero-content text-center">
             <div class="trust-badge mx-auto">
@@ -655,13 +661,15 @@
             </div>
             <p class="page-hero-subtitle">Real Estate Referrals</p>
             <h1>Find Your Perfect Agent</h1>
-            <p class="page-hero-description">I connect home buyers and investors with vetted, experienced eXp agents in their target market—at no extra cost to you.</p>
-            <button class="btn btn-gold" id="GetStartedButton" onclick="startFunnel()">Get Started</button>
+            <p class="page-hero-description">Don't trust your future to a yard sign.  I find you a vetted professional in your target location so you get a pro, not a part-timer.  My matching service is 100% free for clients to use.</p>
+            <p class="page-hero-subtitle">Are you buying or selling a home?</p>
+            <button class="btn btn-gold hero-action-btn" style="min-width: 170px; padding: 2rem 2rem; font-size: 2rem;" onclick="startFunnel('Buy')">Buying</button>
+            <button class="btn btn-gold hero-action-btn" style="min-width: 170px; padding: 2rem 2rem; font-size: 2rem;" onclick="startFunnel('Sell')">Selling</button>
 
         </div>
     </section>
-
-    <!-- HOW IT WORKS SECTION (hidden after funnel starts) -->
+    <!-- #endregion -->
+    <!-- #region HOW IT WORKS SECTION (hidden after funnel starts) -->
     <section class="section section-light landing-section">
         <div class="container">
             <h2 class="section-title">How It Works</h2>
@@ -692,8 +700,8 @@
             </div>
         </div>
     </section>
-
-    <!-- WHY IT HELPS SECTION (hidden after funnel starts) -->
+    <!-- #endregion -->
+    <!-- #region WHY IT HELPS SECTION (hidden after funnel starts) -->
     <section class="section section-cream landing-section">
         <div class="container">
             <h2 class="section-title">Why It Helps</h2>
@@ -739,8 +747,8 @@
             </div>
         </div>
     </section>
-
-    <!-- WHY TRUST MY REFERRALS SECTION (hidden after funnel starts) -->
+    <!-- #endregion -->
+    <!-- #region WHY TRUST MY REFERRALS SECTION (hidden after funnel starts) -->
     <section class="section section-light landing-section">
         <div class="container">
             <div class="row justify-content-center">
@@ -766,8 +774,8 @@
             </div>
         </div>
     </section>
-
-    <!-- FUNNEL SECTION (initially hidden, shows after "Get Started" click) -->
+    <!-- #endregion -->
+    <!-- #region FUNNEL SECTION (initially hidden, shows after clicking Buy or Sell button) -->
     <section class="funnel-section" id="funnelSection">
         <div class="funnel-container">
             <div class="funnel-card">
@@ -776,181 +784,157 @@
                 </div>
 
                 <form id="referralForm" novalidate>
-                    <!-- Step 1: Buy/Sell/Lease -->
+                    <!-- #region Step 1: Timeline -->
                     <div class="step active" data-step="1">
-                        <h2>What are you looking to do?</h2>
-                        <p class="subtitle">Select your primary real estate goal</p>
-                        <div class="options-grid">
-                            <div class="option-card" onclick="selectOption(this, 1, 'Buy')">
-                                <div class="icon">🏠</div>
-                                <div class="label">Buy</div>
-                            </div>
-                            <div class="option-card" onclick="selectOption(this, 1, 'Sell')">
-                                <div class="icon">💰</div>
-                                <div class="label">Sell</div>
-                            </div>
-                            <div class="option-card" onclick="selectOption(this, 1, 'Lease')">
-                                <div class="icon">🔑</div>
-                                <div class="label">Lease</div>
-                            </div>
-                            <div class="option-card" onclick="selectOption(this, 1, 'Other')">
-                                <div class="icon">📋</div>
-                                <div class="label">Other</div>
-                            </div>
-                        </div>
-                        <input type="hidden" name="transactionType" id="transactionType">
-                        <div class="btn-row">
-                            <button type="button" class="btn btn-primary" id="btn1" disabled onclick="nextStep(1)">Continue</button>
-                        </div>
-                    </div>
-
-                    <!-- Step 2: Timeline -->
-                    <div class="step" data-step="2">
-                        <h2>When do you intend to buy or sell?</h2>
+                        <h2 id="timelineQuestion">When do you intend to buy or sell?</h2>
                         <p class="subtitle">Please estimate if unknown</p>
                         <div class="options-grid">
-                            <div class="option-card" onclick="selectOption(this, 2, 'Less than 30 days')">
+                            <div class="option-card" onclick="selectOption(this, 1, 'Less than 30 days')">
                                 <div class="label">Less than 30 days</div>
                             </div>
-                            <div class="option-card" onclick="selectOption(this, 2, '1 - 3 months')">
+                            <div class="option-card" onclick="selectOption(this, 1, '1 - 3 months')">
                                 <div class="label">1 - 3 months</div>
                             </div>
-                            <div class="option-card" onclick="selectOption(this, 2, '3 - 6 months')">
+                            <div class="option-card" onclick="selectOption(this, 1, '3 - 6 months')">
                                 <div class="label">3 - 6 months</div>
                             </div>
-                            <div class="option-card" onclick="selectOption(this, 2, 'greater than 6 months')">
+                            <div class="option-card" onclick="selectOption(this, 1, 'greater than 6 months')">
                                 <div class="label">Greater than 6 months</div>
                             </div>
                         </div>
                         <input type="hidden" name="timeline" id="timeline">
+                        <input type="hidden" name="transactionType" id="transactionType">
                         <div class="btn-row">
-                            <button type="button" class="btn btn-secondary" onclick="prevStep(2)">Back</button>
-                            <button type="button" class="btn btn-primary" id="btn2" disabled onclick="nextStep(2)">Continue</button>
+                            <button type="button" class="btn btn-secondary" onclick="prevStep(1)">Back</button>
+                            <button type="button" class="btn btn-primary" id="btn1" disabled onclick="nextStep(1)">Continue</button>
                         </div>
                     </div>
-
-                    <!-- Step 3: Financing Status -->
-                    <div class="step" data-step="3">
+                    <!-- #endregion -->
+                    <!-- #region Step 2: Financing Status -->
+                    <div class="step" data-step="2">
                         <h2>What is your financing status?</h2>
-                        <p class="subtitle">Select your current situation</p>
+                        <p class="subtitle">Select your current situation.</p>
                         <div class="options-grid">
-                            <div class="option-card" onclick="selectOption(this, 3, 'Cash')">
+                            <div class="option-card" onclick="selectOption(this, 2, 'Cash')">
                                 <div class="icon">💵</div>
                                 <div class="label">Cash</div>
                             </div>
-                            <div class="option-card" onclick="selectOption(this, 3, 'Pre-approved')">
+                            <div class="option-card" onclick="selectOption(this, 2, 'Pre-approved')">
                                 <div class="icon">✅</div>
                                 <div class="label">Pre-approved</div>
                             </div>
-                            <div class="option-card" onclick="selectOption(this, 3, 'Will get pre-approved')">
+                            <div class="option-card" onclick="selectOption(this, 2, 'Will get pre-approved')">
                                 <div class="icon">📝</div>
                                 <div class="label">Will get pre-approved</div>
                             </div>
-                            <div class="option-card" onclick="selectOption(this, 3, 'Unsure')">
+                            <div class="option-card" onclick="selectOption(this, 2, 'Unsure')">
                                 <div class="icon">❓</div>
                                 <div class="label">Unsure</div>
                             </div>
                         </div>
                         <input type="hidden" name="financing" id="financing">
                         <div class="btn-row">
-                            <button type="button" class="btn btn-secondary" onclick="prevStep(3)">Back</button>
-                            <button type="button" class="btn btn-primary" id="btn3" disabled onclick="nextStep(3)">Continue</button>
+                            <button type="button" class="btn btn-secondary" onclick="prevStep(2)">Back</button>
+                            <button type="button" class="btn btn-primary" id="btn2" disabled onclick="nextStep(2)">Continue</button>
                         </div>
                     </div>
-
-                    <!-- Step 4: Price Range -->
-                    <div class="step" data-step="4">
+                    <!-- #endregion -->
+                    <!-- #region Step 3: Price Range -->
+                    <div class="step" data-step="3">
                         <h2>What is your desired price range?</h2>
                         <p class="subtitle">For sale or purchase</p>
                         <div class="options-grid">
-                            <div class="option-card" onclick="selectOption(this, 4, 'Less than $200,000')">
+                            <div class="option-card" onclick="selectOption(this, 3, 'Less than $200,000')">
                                 <div class="label">Less than $200K</div>
                             </div>
-                            <div class="option-card" onclick="selectOption(this, 4, '$200,000 - $400,000')">
+                            <div class="option-card" onclick="selectOption(this, 3, '$200,000 - $400,000')">
                                 <div class="label">$200K - $400K</div>
                             </div>
-                            <div class="option-card" onclick="selectOption(this, 4, '$400,000 - $600,000')">
+                            <div class="option-card" onclick="selectOption(this, 3, '$400,000 - $600,000')">
                                 <div class="label">$400K - $600K</div>
                             </div>
-                            <div class="option-card" onclick="selectOption(this, 4, '$600,000 - $1,000,000')">
+                            <div class="option-card" onclick="selectOption(this, 3, '$600,000 - $1,000,000')">
                                 <div class="label">$600K - $1M</div>
                             </div>
-                            <div class="option-card" onclick="selectOption(this, 4, 'Greater than $1,000,000')">
+                            <div class="option-card" onclick="selectOption(this, 3, 'Greater than $1,000,000')">
                                 <div class="label">Greater than $1M</div>
+                            </div>
+                            <div class="option-card" onclick="selectOption(this, 3, 'unsure')">
+                                <div class="label">Unsure</div>
                             </div>
                         </div>
                         <input type="hidden" name="priceRange" id="priceRange">
                         <div class="btn-row">
-                            <button type="button" class="btn btn-secondary" onclick="prevStep(4)">Back</button>
-                            <button type="button" class="btn btn-primary" id="btn4" disabled onclick="nextStep(4)">Continue</button>
+                            <button type="button" class="btn btn-secondary" onclick="prevStep(3)">Back</button>
+                            <button type="button" class="btn btn-primary" id="btn3" disabled onclick="nextStep(3)">Continue</button>
                         </div>
                     </div>
-
-                    <!-- Step 5: Property Type -->
-                    <div class="step" data-step="5">
+                    <!-- #endregion -->
+                    <!-- #region Step 4: Property Type -->
+                    <div class="step" data-step="4">
                         <h2>What type of property?</h2>
                         <p class="subtitle">Select the property type</p>
                         <div class="options-grid">
-                            <div class="option-card" onclick="selectOption(this, 5, 'Single-family home')">
+                            <div class="option-card" onclick="selectOption(this, 4, 'Single-family home')">
                                 <div class="icon">🏡</div>
                                 <div class="label">Single-family</div>
                             </div>
-                            <div class="option-card" onclick="selectOption(this, 5, 'Condo / Condominium')">
+                            <div class="option-card" onclick="selectOption(this, 4, 'Condo / Condominium')">
                                 <div class="icon">🏢</div>
                                 <div class="label">Condo</div>
                             </div>
-                            <div class="option-card" onclick="selectOption(this, 5, 'Townhome')">
+                            <div class="option-card" onclick="selectOption(this, 4, 'Townhome')">
                                 <div class="icon">🏘️</div>
                                 <div class="label">Townhome</div>
                             </div>
-                            <div class="option-card" onclick="selectOption(this, 5, 'Land only')">
+                            <div class="option-card" onclick="selectOption(this, 4, 'Land only')">
                                 <div class="icon">🌳</div>
                                 <div class="label">Land</div>
                             </div>
-                            <div class="option-card" onclick="selectOption(this, 5, 'Multi-family')">
+                            <div class="option-card" onclick="selectOption(this, 4, 'Multi-family')">
                                 <div class="icon">🏬</div>
                                 <div class="label">Multi-family</div>
                             </div>
                         </div>
                         <input type="hidden" name="propertyType" id="propertyType">
                         <div class="btn-row">
+                            <button type="button" class="btn btn-secondary" onclick="prevStep(4)">Back</button>
+                            <button type="button" class="btn btn-primary" id="btn4" disabled onclick="nextStep(4)">Continue</button>
+                        </div>
+                    </div>
+                    <!-- #endregion -->
+                    <!-- #region Step 5: Location -->
+                    <div class="step" data-step="5">
+                        <h2>Preferred Location</h2>
+                        <p class="subtitle">Where are you looking to buy or sell?</p>
+                        <div class="input-group">
+                            <label for="location">Your Target City or Zip Code</label>
+                            <input type="text" id="location" name="location" placeholder="e.g., Austin, TX 78701">
+                        </div>
+                        <div class="input-group">
+                            <label for="currentAddress">Your Current Address (City or Zip Code)</label>
+                            <input type="text" id="currentAddress" name="currentAddress" placeholder="e.g., San Antonio, TX">
+                        </div>
+                        <div class="btn-row">
                             <button type="button" class="btn btn-secondary" onclick="prevStep(5)">Back</button>
                             <button type="button" class="btn btn-primary" id="btn5" disabled onclick="nextStep(5)">Continue</button>
                         </div>
                     </div>
-
-                    <!-- Step 6: Location -->
+                    <!-- #endregion -->
+                    <!-- #region Step 6: Contact Method & Time -->
                     <div class="step" data-step="6">
-                        <h2>Preferred Location</h2>
-                        <p class="subtitle">Where are you looking to buy or sell?</p>
-                        <div class="input-group">
-                            <label for="location">City / Zip Code / Neighborhood</label>
-                            <input type="text" id="location" name="location" placeholder="e.g., Austin, TX 78701">
-                        </div>
-                        <div class="input-group">
-                            <label for="currentAddress">Current Address (City, State)</label>
-                            <input type="text" id="currentAddress" name="currentAddress" placeholder="e.g., San Antonio, TX">
-                        </div>
-                        <div class="btn-row">
-                            <button type="button" class="btn btn-secondary" onclick="prevStep(6)">Back</button>
-                            <button type="button" class="btn btn-primary" id="btn6" disabled onclick="nextStep(6)">Continue</button>
-                        </div>
-                    </div>
-
-                    <!-- Step 7: Contact Method & Time -->
-                    <div class="step" data-step="7">
                         <h2>How should we contact you?</h2>
                         <p class="subtitle">Select your preferences</p>
                         <div class="options-grid">
-                            <div class="option-card" onclick="selectOption(this, 7, 'Email')">
+                            <div class="option-card" onclick="selectOption(this, 6, 'Email')">
                                 <div class="icon">✉️</div>
                                 <div class="label">Email</div>
                             </div>
-                            <div class="option-card" onclick="selectOption(this, 7, 'Text')">
+                            <div class="option-card" onclick="selectOption(this, 6, 'Text')">
                                 <div class="icon">💬</div>
                                 <div class="label">Text</div>
                             </div>
-                            <div class="option-card" onclick="selectOption(this, 7, 'Voice call')">
+                            <div class="option-card" onclick="selectOption(this, 6, 'Voice call')">
                                 <div class="icon">📞</div>
                                 <div class="label">Voice call</div>
                             </div>
@@ -967,13 +951,13 @@
                             </select>
                         </div>
                         <div class="btn-row">
-                            <button type="button" class="btn btn-secondary" onclick="prevStep(7)">Back</button>
-                            <button type="button" class="btn btn-primary" id="btn7" disabled onclick="nextStep(7)">Continue</button>
+                            <button type="button" class="btn btn-secondary" onclick="prevStep(6)">Back</button>
+                            <button type="button" class="btn btn-primary" id="btn6" disabled onclick="nextStep(6)">Continue</button>
                         </div>
                     </div>
-
-                    <!-- Step 8: Contact Info -->
-                    <div class="step" data-step="8">
+                    <!-- #endregion -->
+                    <!-- #region Step 7: Contact Info  -->
+                    <div class="step" data-step="7">
                         <h2>Your Information</h2>
                         <p class="subtitle">Final step - let's get you matched!</p>
                         <div class="input-group">
@@ -1007,14 +991,14 @@
                             <label for="consent">I consent to my contact details being shared with an eXp Realty agent for the purpose of matching me to real estate services. *</label>
                         </div>
                         <div class="btn-row">
-                            <button type="button" class="btn btn-secondary" onclick="prevStep(8)">Back</button>
+                            <button type="button" class="btn btn-secondary" onclick="prevStep(7)">Back</button>
                             <!--Facebook Lead Tracking added inline to button's onclick-->
-                            <button type="button" class="btn btn-primary" id="btn8" onclick="fbq('track', 'Lead'); submitForm()">Get Matched!</button>
+                            <button type="button" class="btn btn-primary" id="btn7" onclick="submitForm(); if (typeof fbq === 'function') {fbq('track', 'Lead')}">Get Matched!</button>
                         </div>
                     </div>
-
-                    <!-- Success Step -->
-                    <div class="step" data-step="9">
+                    <!-- #endregion -->
+                    <!-- #region Success Step 8 -->
+                    <div class="step" data-step="8">
                         <div class="success-step">
                             <div class="result-icon">✓</div>
                             <h2>You're All Set!</h2>
@@ -1024,6 +1008,7 @@
 
                         </div>
                     </div>
+                    <!-- #endregion -->
                 </form>
 
                 <div class="step-indicator" id="stepIndicator">
@@ -1034,13 +1019,12 @@
                     <div class="step-dot"></div>
                     <div class="step-dot"></div>
                     <div class="step-dot"></div>
-                    <div class="step-dot"></div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- CONTACT SECTION (always visible below funnel) -->
+    <!-- #endregion -->
+    <!-- #region CONTACT SECTION (always visible below funnel) -->
     <section class="contact-section">
         <div class="container">
             <div class="row g-5">
@@ -1080,28 +1064,52 @@
             </div>
         </div>
     </section>
-
-    <!-- FOOTER -->
+    <!-- #endregion -->
+    <!-- #region FOOTER -->
     <footer>
         <div class="container">
             <p>Clayton VanTol | Real Estate Referrals | eXp Realty | 25 April 2026</p>
         </div>
     </footer>
-
-    <!-- SCRIPTS -->
+    <!-- #endregion -->
+    <!-- #region SCRIPTS -->
     <script src="script.js"></script>
     <script>
-        function startFunnel() {
+        function startFunnel(type) {
             // Facebook Tracking Start
             fbq('track', 'InitiateCheckout');
             // Facebook Tracking End
-            // Hide landing sections
+            
+            // Hide landing sections and hero
             document.querySelectorAll('.landing-section').forEach(function(section) {
                 section.style.display = 'none';
             });
+            document.querySelector('.page-hero').style.display = 'none';
             
             // Show funnel
             document.getElementById('funnelSection').classList.add('active');
+            
+            // Set the transaction type from hero button
+            if (type) {
+                // Hide the hero buttons after selection
+                document.querySelectorAll('.hero-action-btn').forEach(function(btn) {
+                    btn.classList.add('hidden');
+                });
+                
+                // Set transaction type
+                document.getElementById('transactionType').value = type;
+                
+                // Update Timeline question based on type
+                const timelineQuestion = document.getElementById('timelineQuestion');
+                if (type === 'Buy') {
+                    timelineQuestion.textContent = 'When do you intend to buy?';
+                } else if (type === 'Sell') {
+                    timelineQuestion.textContent = 'When do you intend to sell?';
+                }
+                
+                // Enable the Continue button for step 1 since we've already selected
+                document.getElementById('btn1').disabled = false;
+            }
             
             // Scroll to funnel
             document.getElementById('funnelSection').scrollIntoView({ behavior: 'smooth' });
@@ -1112,5 +1120,6 @@
             location.reload();
         }
     </script>
+    <!-- #endregion -->
 </body>
 </html>

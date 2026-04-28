@@ -1,5 +1,5 @@
 let currentStep = 1;
-const totalSteps = 8;
+const totalSteps = 7;
 
 function selectOption(el, step, value) {
     const stepEl = document.querySelector(`.step[data-step="${step}"]`);
@@ -14,7 +14,7 @@ function selectOption(el, step, value) {
 }
 
 function nextStep(step) {
-    if (step === 6) {
+    if (step === 5) {
         const location = document.getElementById('location').value;
         if (!location.trim()) {
             document.getElementById('location').focus();
@@ -30,6 +30,19 @@ function nextStep(step) {
 }
 
 function prevStep(step) {
+    // If going back from step 1, hide funnel and restore landing sections
+    if (step - 1 === 0) {
+        document.getElementById('funnelSection').classList.remove('active');
+        document.querySelectorAll('.landing-section').forEach(function(section) {
+            section.style.display = 'block';
+        });
+        document.querySelector('.page-hero').style.display = 'block';
+        document.querySelectorAll('.hero-action-btn').forEach(function(btn) {
+            btn.classList.remove('hidden');
+        });
+        return;
+    }
+    
     document.querySelector(`.step[data-step="${step}"]`).classList.remove('active');
     document.querySelector(`.step[data-step="${step - 1}"]`).classList.add('active');
     currentStep = step - 1;
@@ -67,12 +80,12 @@ function validatePhone(phone) {
 function formatPhone(input) {
     let value = input.value.replace(/\D/g, '');
     if (value.length > 0) {
-        if (value.length <= 3) {
-            value = value;
-        } else if (value.length <= 6) {
-            value = `(${value.slice(0, 3)}) ${value.slice(3)}`;
-        } else {
-            value = `(${value.slice(0, 3)}) ${value.slice(3, 6)}-${value.slice(6, 10)}`;
+        if (value.length > 3) {
+            if (value.length <= 6) {
+                value = `(${value.slice(0, 3)}) ${value.slice(3)}`;
+            } else {
+                value = `(${value.slice(0, 3)}) ${value.slice(3, 6)}-${value.slice(6, 10)}`;
+            }
         }
     }
     input.value = value;
@@ -107,7 +120,7 @@ function submitForm() {
         return;
     }
     
-    const btn = document.getElementById('btn8');
+    const btn = document.getElementById('btn7');
     btn.disabled = true;
     btn.textContent = 'Submitting...';
     
@@ -116,14 +129,18 @@ function submitForm() {
     
     const formData = buildFormData(responseId);
     
+    // lines 132–134
     submitToGoogleForms(formData).then(() => {
         showSuccess();
+    }).catch(() => {
+        btn.disabled = false;
+        btn.textContent = 'Get Matched!';
+        alert('Submission failed. Please check your connection and try again.');
     });
 }
 
 function buildFormData(responseId) {
     return {
-        'Response ID': responseId,
         'First Name': document.getElementById('firstName').value,
         'Last Name': document.getElementById('lastName').value,
         'Email': document.getElementById('email').value,
@@ -215,11 +232,11 @@ function generateResponseId() {
 
 function showSuccess() {
     document.querySelector(`.step[data-step="${currentStep}"]`).classList.remove('active');
-    document.querySelector(`.step[data-step="9"]`).classList.add('active');
+    document.querySelector(`.step[data-step="8"]`).classList.add('active');
     document.getElementById('progressFill').style.width = '100%';
     document.getElementById('stepIndicator').style.display = 'none';
     
-    const btnRow = document.querySelector('.step[data-step="8"] .btn-row');
+    const btnRow = document.querySelector('.step[data-step="7"] .btn-row');
     if (btnRow) btnRow.style.display = 'none';
 }
 
@@ -229,21 +246,16 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('howHeard').value = source;
     }
     
-    const utmSource = getQueryParam('utm_source');
-    if (utmSource) {
-        console.log('UTM Source:', utmSource);
-    }
-    
     const phoneInput = document.getElementById('phone');
     if (phoneInput) {
         phoneInput.addEventListener('input', () => formatPhone(phoneInput));
     }
 
     const locationInput = document.getElementById('location');
-    const btn6 = document.getElementById('btn6');
-    if (locationInput && btn6) {
+    const btn5 = document.getElementById('btn5');
+    if (locationInput && btn5) {
         locationInput.addEventListener('input', () => {
-            btn6.disabled = !locationInput.value.trim();
+            btn5.disabled = !locationInput.value.trim();
         });
     }
 });
