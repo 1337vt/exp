@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Remote-buy checklist for military PCS buyers purchasing a home from overseas.">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow">
+    <meta name="author" content="Clayton VanTol">
+    <meta name="theme-color" content="#1e3a5f">
+    <title>Remote-Buy Checklist | Clayton VanTol - Real Estate Referrals</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --navy: #1e3a5f;
+            --navy-light: #2c5282;
+            --gold: #fdcd31;
+            --gold-light: #ffdd60;
+            --cream: #faf8f5;
+            --white: #ffffff;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-500: #6b7280;
+            --gray-700: #374151;
+            --gray-900: #111827;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--cream);
+            color: var(--gray-700);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--navy);
+            font-weight: 600;
+        }
+
+        /* PAGE HERO */
+        .page-hero {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            color: var(--white);
+            padding: 60px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+
+        .page-hero .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .page-hero h1 {
+            color: var(--white);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .page-hero-subtitle {
+            color: var(--gold);
+            font-size: 1.1rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 1rem;
+        }
+
+        .page-hero-description {
+            color: rgba(255,255,255,0.85);
+            font-size: 1.05rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* PROGRESS BAR */
+        .progress-container {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: var(--white);
+            border-bottom: 1px solid var(--gray-200);
+            padding: 12px 0;
+        }
+
+        .progress-track {
+            height: 8px;
+            background: var(--gray-200);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--gold), var(--gold-light));
+            border-radius: 4px;
+            transition: width 0.4s ease;
+            width: 0%;
+        }
+
+        .progress-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: var(--gray-500);
+            margin-top: 4px;
+        }
+
+        /* CHECKLIST SECTION */
+        .checklist-section {
+            padding: 40px 0 80px;
+        }
+
+        .checklist-card {
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(30, 58, 95, 0.08);
+            border: 1px solid var(--gray-200);
+            margin-bottom: 24px;
+            overflow: hidden;
+            transition: box-shadow 0.2s ease;
+        }
+
+        .checklist-card:hover {
+            box-shadow: 0 8px 30px rgba(30, 58, 95, 0.12);
+        }
+
+        .checklist-card.completed {
+            border-color: var(--gold);
+        }
+
+        .checklist-card.completed .card-header {
+            background: linear-gradient(135deg, rgba(201, 162, 39, 0.1), rgba(255, 221, 96, 0.1));
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 14px 20px;
+            cursor: pointer;
+            user-select: none;
+            transition: background 0.2s ease;
+        }
+
+        .card-header:hover {
+            background: var(--gray-100);
+        }
+
+        .card-number {
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: var(--navy);
+            flex-shrink: 0;
+        }
+
+        .card-header h2 {
+            font-size: 1.1rem;
+            margin: 0;
+            flex-grow: 1;
+        }
+
+        .card-status {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            border: 2px solid var(--gray-200);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: all 0.2s ease;
+        }
+
+        .card-status.complete {
+            background: var(--gold);
+            border-color: var(--gold);
+        }
+
+        .card-status.complete svg {
+            opacity: 1;
+        }
+
+        .card-status svg {
+            width: 14px;
+            height: 14px;
+            stroke: var(--navy);
+            stroke-width: 3;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
+
+        .collapse-icon {
+            width: 20px;
+            height: 20px;
+            transition: transform 0.3s ease;
+            stroke: var(--gray-500);
+            flex-shrink: 0;
+        }
+
+        .checklist-card.open .collapse-icon {
+            transform: rotate(180deg);
+        }
+
+        .card-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .checklist-card.open .card-body {
+            max-height: 800px;
+        }
+
+        .checklist-items {
+            padding: 0 20px 14px 64px;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--gray-100);
+        }
+
+        .checklist-item:last-child {
+            border-bottom: none;
+        }
+
+        .checklist-item input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin-top: 2px;
+            accent-color: var(--gold);
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        .checklist-item label {
+            cursor: pointer;
+            font-size: 0.95rem;
+            color: var(--gray-700);
+            transition: color 0.2s ease;
+        }
+
+        .checklist-item input[type="checkbox"]:checked + label {
+            color: var(--gray-500);
+            text-decoration: line-through;
+        }
+
+        .info-link {
+            color: var(--navy-light);
+            font-size: 0.85rem;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px dashed var(--navy-light);
+        }
+
+        .info-link:hover {
+            color: var(--navy);
+            border-bottom-style: solid;
+        }
+
+        .subitems {
+            max-height: 0;
+            overflow: hidden;
+            padding-left: 30px;
+            transition: max-height 0.3s ease;
+        }
+
+        .subitems.expanded {
+            max-height: 600px;
+        }
+
+        .subitems .checklist-item {
+            padding: 10px 0;
+        }
+
+        .subitems .checklist-item input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--gold-light);
+        }
+
+        .subitems .checklist-item label {
+            font-size: 0.9rem;
+            color: var(--gray-500);
+        }
+
+        .has-subitems {
+            cursor: pointer;
+        }
+
+        .has-subitems > label {
+            font-weight: 500;
+        }
+
+        .agent-handled {
+            background: rgba(30, 58, 95, 0.04);
+            border-left: 3px solid var(--navy);
+            padding-left: 16px !important;
+        }
+
+        .agent-handled label {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .agent-badge {
+            display: inline-block;
+            background: var(--navy);
+            color: var(--gold);
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            white-space: nowrap;
+        }
+
+        .important-badge {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--navy);
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            white-space: nowrap;
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--navy);
+            color: rgba(255,255,255,0.7);
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.85rem;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .page-hero h1 { font-size: 1.75rem; }
+            .checklist-items { padding-left: 20px; }
+            .card-header { padding: 12px 16px; gap: 12px; }
+            .checklist-items { padding: 0 16px 12px; }
+        }
+
+        /* PRINT STYLES */
+        @media print {
+            body {
+                background: white;
+                font-size: 11pt;
+            }
+
+            .page-hero {
+                padding: 30px 0 40px;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .progress-container { display: none; }
+
+            .checklist-card {
+                box-shadow: none;
+                border: 1px solid var(--gray-200);
+                break-inside: avoid;
+                margin-bottom: 12px;
+            }
+
+            .checklist-card:hover { box-shadow: none; }
+
+            .card-body {
+                max-height: none !important;
+            }
+
+            .collapse-icon { display: none; }
+
+            .card-header {
+                cursor: default;
+            }
+
+            .card-header:hover {
+                background: none;
+            }
+
+            .checklist-item { padding: 8px 0; }
+
+            .checklist-item input[type="checkbox"] {
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                width: 16px;
+                height: 16px;
+                border: 2px solid var(--gray-500);
+                border-radius: 3px;
+                background: white;
+                cursor: pointer;
+            }
+
+            .checklist-item input[type="checkbox"]:checked {
+                background: var(--gold);
+                border-color: var(--gold);
+                position: relative;
+            }
+
+            .checklist-item input[type="checkbox"]:checked::after {
+                content: '';
+                display: block;
+                width: 10px;
+                height: 6px;
+                border: 2px solid var(--navy);
+                border-top: none;
+                border-right: none;
+                transform: rotate(-45deg) translate(1px, -1px);
+            }
+
+            footer {
+                background: var(--navy);
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            a { color: inherit; text-decoration: none; }
+        }
+    </style>
+</head>
+<body>
+    <section class="page-hero">
+        <div class="container hero-content text-center">
+            <p class="page-hero-subtitle">Overseas PCS Referral Pack</p>
+            <h1>Remote-Buy Checklist</h1>
+            <p class="page-hero-description">A step-by-step guide for military buyers purchasing a home remotely. Check off each item as you complete it. Your progress is saved automatically.</p>
+        </div>
+    </section>
+
+    <div class="progress-container">
+        <div class="container">
+            <div class="progress-track">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="progress-label">
+                <span id="completedText">0 of 14 sections complete</span>
+                <span id="percentText">0%</span>
+            </div>
+        </div>
+    </div>
+
+    <section class="checklist-section">
+        <div class="container" style="max-width: 800px;">
+
+            <div class="checklist-card open" data-card="1">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <div class="card-number">1</div>
+                    <h2>Confirm PCS timeline and orders</h2>
+                    <div class="card-status"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    <svg class="collapse-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </div>
+                <div class="card-body">
+                    <div class="checklist-items">
+                        <div class="checklist-item has-subitems" data-group="1-1">
+                            <input type="checkbox" id="item-1-1" onchange="toggleSubitems(this); updateProgress()">
+                            <label for="item-1-1">Note PCS date window, reporting date, and any housing deadlines.</label>
+                        </div>
+                        <div class="subitems" id="subitems-1-1">
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-1-1a" onchange="updateProgress()">
+                                <label for="item-1-1a">Record your official PCS orders effective date and report-by date.</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-1-1b" onchange="updateProgress()">
+                                <label for="item-1-1b">Confirm TLA (Temporary Lodging Allowance) eligibility and duration for your destination.</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-1-1c" onchange="updateProgress()">
+                                <label for="item-1-1c">Check if your command has any specific housing timelines or home-ownership briefings required.</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-1-1d" onchange="updateProgress()">
+                                <label for="item-1-1d">Coordinate your house-hunting trip dates with your sponsor at the new duty station.</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checklist-card" data-card="2">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <div class="card-number">2</div>
+                    <h2>Financing & documentation</h2>
+                    <div class="card-status"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    <svg class="collapse-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </div>
+                <div class="card-body">
+                    <div class="checklist-items">
+                        <div class="checklist-item">
+                            <input type="checkbox" id="item-2-1" onchange="updateProgress()">
+                            <label for="item-2-1">Obtain VA Certificate of Eligibility (COE). <a href="https://www.va.gov/housing-assistance/home-loans/how-to-request-coe/" target="_blank" rel="noopener noreferrer" class="info-link">Learn more</a>&nbsp;<span class="important-badge">Important</span></label>
+                        </div>
+                        <div class="checklist-item has-subitems" data-group="2-2">
+                            <input type="checkbox" id="item-2-2" onchange="toggleSubitems(this); updateProgress()">
+                            <label for="item-2-2">Get lender pre-approval or pre-qualification. &nbsp;<span class="important-badge">Important</span></label>
+                        </div>
+                        <div class="subitems" id="subitems-2-2">
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-2-2a" onchange="updateProgress()">
+                                <label for="item-2-2a">Compare at least 2-3 VA-experienced lenders for rates, fees, and overseas communication process.</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-2-2b" onchange="updateProgress()">
+                                <label for="item-2-2b">Submit full pre-approval application (not just pre-qualification) for a stronger offer.</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-2-2c" onchange="updateProgress()">
+                                <label for="item-2-2c">Request a pre-approval letter with an expiration date that covers your house-hunting window.</label>
+                            </div>
+                        </div>
+                        <div class="checklist-item has-subitems" data-group="2-3">
+                            <input type="checkbox" id="item-2-3" onchange="toggleSubitems(this); updateProgress()">
+                            <label for="item-2-3">Prepare proof of funds for earnest money and required IDs/address history.</label>
+                        </div>
+                        <div class="subitems" id="subitems-2-3">
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-2-3a" onchange="updateProgress()">
+                                <label for="item-2-3a">Gather 60-90 days of bank statements showing sufficient funds for earnest money deposit (typically 1-3% of purchase price).</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-2-3b" onchange="updateProgress()">
+                                <label for="item-2-3b">Prepare copies of government-issued IDs (CAC, passport, driver's license).</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-2-3c" onchange="updateProgress()">
+                                <label for="item-2-3c">Compile a 2-year address and employment history for the loan application.</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-2-3d" onchange="updateProgress()">
+                                <label for="item-2-3d">Document any large recent deposits with source letters or supporting paperwork.</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checklist-card" data-card="3">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <div class="card-number">3</div>
+                    <h2>Power of Attorney & remote signing</h2>
+                    <div class="card-status"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    <svg class="collapse-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </div>
+                <div class="card-body">
+                    <div class="checklist-items">
+                        <div class="checklist-item has-subitems" data-group="3-1">
+                            <input type="checkbox" id="item-3-1" onchange="toggleSubitems(this); updateProgress()">
+                            <label for="item-3-1">Decide if you'll grant Power of Attorney (POA) for closing.</label>
+                        </div>
+                        <div class="subitems" id="subitems-3-1">
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-3-1a" onchange="updateProgress()">
+                                <label for="item-3-1a">Choose a trusted person (spouse, family member, or friend) to act as your agent for closing.</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-3-1b" onchange="updateProgress()">
+                                <label for="item-3-1b">Confirm with your lender that a POA is acceptable for your specific loan type and closing requirements.</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-3-1c" onchange="updateProgress()">
+                                <label for="item-3-1c">Research whether a limited/specific POA (for closing only) is sufficient instead of a general POA.</label>
+                            </div>
+                        </div>
+                        <div class="checklist-item has-subitems" data-group="3-2">
+                            <input type="checkbox" id="item-3-2" onchange="toggleSubitems(this); updateProgress()">
+                            <label for="item-3-2">Confirm acceptable POA forms, notarization, and any apostille requirements from your country.</label>
+                        </div>
+                        <div class="subitems" id="subitems-3-2">
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-3-2a" onchange="updateProgress()">
+                                <label for="item-3-2a">Obtain the lender's required POA template — many lenders have their own specific form that must be used.</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-3-2b" onchange="updateProgress()">
+                                <label for="item-3-2b">Have the POA notarized at your nearest U.S. Embassy or Consulate, or through a military base legal office.</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-3-2c" onchange="updateProgress()">
+                                <label for="item-3-2c">If overseas, verify if an apostille or authentication certificate is required by your host country for the POA to be valid.</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-3-2d" onchange="updateProgress()">
+                                <label for="item-3-2d">Mail the original signed POA to your agent or closing attorney well before the closing date — do not send scans only.</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checklist-card" data-card="4">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <div class="card-number">4</div>
+                    <h2>Agent referral & matching</h2>
+                    <div class="card-status"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    <svg class="collapse-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </div>
+                <div class="card-body">
+                    <div class="checklist-items">
+                        <div class="checklist-item has-subitems" data-group="4-1">
+                            <input type="checkbox" id="item-4-1" onchange="toggleSubitems(this); updateProgress()">
+                            <label for="item-4-1">Connect with your referred agent for an introductory consultation.</label>
+                        </div>
+                        <div class="subitems" id="subitems-4-1">
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-4-1a" onchange="updateProgress()">
+                                <label for="item-4-1a">Schedule a call to discuss your must-haves, budget, and target neighborhoods near your new duty station.</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-4-1b" onchange="updateProgress()">
+                                <label for="item-4-1b">Confirm preferred communication method and how often you'd like updates.</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-4-1c" onchange="updateProgress()">
+                                <label for="item-4-1c">Share your PCS timeline so the agent can align their search and tour scheduling.</label>
+                            </div>
+                        </div>
+                        <div class="checklist-item has-subitems agent-handled" data-group="4-2">
+                            <input type="checkbox" id="item-4-2" onchange="toggleSubitems(this); updateProgress()">
+                            <label for="item-4-2">Agent vetting &amp; qualification <span class="agent-badge">I handle all these items so you don't have to</span></label>
+                        </div>
+                        <div class="subitems" id="subitems-4-2">
+                            <div class="checklist-item agent-handled">
+                                <input type="checkbox" id="item-4-2a" onchange="updateProgress()">
+                                <label for="item-4-2a">Verify active real estate license and clean disciplinary record. <span class="agent-badge">I handle this</span></label>
+                            </div>
+                            <div class="checklist-item agent-handled">
+                                <input type="checkbox" id="item-4-2b" onchange="updateProgress()">
+                                <label for="item-4-2b">Confirm VA loan experience and knowledge of military buyer needs. <span class="agent-badge">I handle this</span></label>
+                            </div>
+                            <div class="checklist-item agent-handled">
+                                <input type="checkbox" id="item-4-2c" onchange="updateProgress()">
+                                <label for="item-4-2c">Check references, past client reviews, and track record with remote buyers. <span class="agent-badge">I handle this</span></label>
+                            </div>
+                            <div class="checklist-item agent-handled">
+                                <input type="checkbox" id="item-4-2d" onchange="updateProgress()">
+                                <label for="item-4-2d">Confirm local market expertise around your new duty station and base commute routes. <span class="agent-badge">I handle this</span></label>
+                            </div>
+                            <div class="checklist-item agent-handled">
+                                <input type="checkbox" id="item-4-2e" onchange="updateProgress()">
+                                <label for="item-4-2e">Ensure the agent commits to responsive communication suitable for overseas time zones. <span class="agent-badge">We handle this</span></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checklist-card" data-card="5">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <div class="card-number">5</div>
+                    <h2>Property screening & virtual tours</h2>
+                    <div class="card-status"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    <svg class="collapse-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </div>
+                <div class="card-body">
+                    <div class="checklist-items">
+                        <div class="checklist-item has-subitems" data-group="5-1">
+                            <input type="checkbox" id="item-5-1" onchange="toggleSubitems(this); updateProgress()">
+                            <label for="item-5-1">Request live video tours and recorded walkthroughs.</label>
+                        </div>
+                        <div class="subitems" id="subitems-5-1">
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-5-1a" onchange="updateProgress()">
+                                <label for="item-5-1a">Schedule live video walkthroughs via FaceTime, Zoom, or WhatsApp so you can ask questions in real time.</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-5-1b" onchange="updateProgress()">
+                                <label for="item-5-1b">Ask your agent to open closets, check water pressure, test lights, and show the exterior roof and foundation during the tour.</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-5-1c" onchange="updateProgress()">
+                                <label for="item-5-1c">Request a recorded walkthrough you can rewatch and share with family members in different time zones.</label>
+                            </div>
+                        </div>
+                        <div class="checklist-item has-subitems" data-group="5-2">
+                            <input type="checkbox" id="item-5-2" onchange="toggleSubitems(this); updateProgress()">
+                            <label for="item-5-2">Ask for floor plans, high-resolution photos, neighborhood drive-bys, and commute videos.</label>
+                        </div>
+                        <div class="subitems" id="subitems-5-2">
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-5-2a" onchange="updateProgress()">
+                                <label for="item-5-2a">Review the property's floor plan to verify room sizes, layout flow, and any potential issues for your furniture or needs.</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-5-2b" onchange="updateProgress()">
+                                <label for="item-5-2b">Request photos of all rooms from multiple angles, including the attic, basement, crawlspace, garage, and backyard.</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-5-2c" onchange="updateProgress()">
+                                <label for="item-5-2c">Have your agent record a neighborhood drive-by showing nearby schools, shopping, and community amenities.</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-5-2d" onchange="updateProgress()">
+                                <label for="item-5-2d">Request a timed commute video from the property to your new duty station during typical rush-hour conditions.</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checklist-card" data-card="6">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <div class="card-number">6</div>
+                    <h2>Offer strategy & contingencies</h2>
+                    <div class="card-status"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    <svg class="collapse-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </div>
+                <div class="card-body">
+                    <div class="checklist-items">
+                        <div class="checklist-item has-subitems" data-group="6-1">
+                            <input type="checkbox" id="item-6-1" onchange="toggleSubitems(this); updateProgress()">
+                            <label for="item-6-1">Set desired closing/possession timeline and contingency preferences (inspection, financing, appraisal).</label>
+                        </div>
+                        <div class="subitems" id="subitems-6-1">
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-6-1a" onchange="updateProgress()">
+                                <label for="item-6-1a">Define your ideal closing date based on PCS orders, TLA expiration, and anticipated household goods delivery.</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-6-1b" onchange="updateProgress()">
+                                <label for="item-6-1b">Decide which contingencies to include — inspection, financing, and appraisal are standard protections for buyers.</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-6-1c" onchange="updateProgress()">
+                                <label for="item-6-1c">Determine your maximum acceptable closing delay (e.g., 15-30 days) before walking away from the deal.</label>
+                            </div>
+                        </div>
+                        <div class="checklist-item has-subitems" data-group="6-2">
+                            <input type="checkbox" id="item-6-2" onchange="toggleSubitems(this); updateProgress()">
+                            <label for="item-6-2">Decide stance on appraisal gap, waivers, and leaseback/temporary occupancy if needed.</label>
+                        </div>
+                        <div class="subitems" id="subitems-6-2">
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-6-2a" onchange="updateProgress()">
+                                <label for="item-6-2a">Set a cap on any appraisal gap you're willing to cover out of pocket above the VA appraised value.</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-6-2b" onchange="updateProgress()">
+                                <label for="item-6-2b">Avoid waiving inspection or appraisal contingencies when buying remotely — you need those protections.</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-6-2c" onchange="updateProgress()">
+                                <label for="item-6-2c">Discuss post-closing occupancy terms if the seller needs time to move out (rent-back agreements).</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checklist-card" data-card="7">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <div class="card-number">7</div>
+                    <h2>Inspections, repairs & remote oversight</h2>
+                    <div class="card-status"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    <svg class="collapse-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </div>
+                <div class="card-body">
+                    <div class="checklist-items">
+                        <div class="checklist-item has-subitems" data-group="7-1">
+                            <input type="checkbox" id="item-7-1" onchange="toggleSubitems(this); updateProgress()">
+                            <label for="item-7-1">Hire local inspectors and request video walkthroughs of findings.</label>
+                        </div>
+                        <div class="subitems" id="subitems-7-1">
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-7-1a" onchange="updateProgress()">
+                                <label for="item-7-1a">Select a certified home inspector with strong reviews; consider adding specialized inspections for radon, mold, pests, or sewer lines.</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-7-1b" onchange="updateProgress()">
+                                <label for="item-7-1b">Ask the inspector to record a video walkthrough highlighting any concerns or defects found.</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-7-1c" onchange="updateProgress()">
+                                <label for="item-7-1c">Review the full written inspection report and discuss major findings with your agent by phone or video call.</label>
+                            </div>
+                        </div>
+                        <div class="checklist-item has-subitems" data-group="7-2">
+                            <input type="checkbox" id="item-7-2" onchange="toggleSubitems(this); updateProgress()">
+                            <label for="item-7-2">Set repair caps, vendor approval process, and require contractor quotes before work starts.</label>
+                        </div>
+                        <div class="subitems" id="subitems-7-2">
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-7-2a" onchange="updateProgress()">
+                                <label for="item-7-2a">Establish a maximum repair credit or dollar cap beyond which you'd renegotiate or walk away from the purchase.</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-7-2b" onchange="updateProgress()">
+                                <label for="item-7-2b">Require that all repair work be done by licensed, insured contractors — not DIY fixes by the seller.</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-7-2c" onchange="updateProgress()">
+                                <label for="item-7-2c">Request before-and-after photos of completed repairs and, if possible, a final walkthrough video before closing.</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checklist-card" data-card="8">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <div class="card-number">8</div>
+                    <h2>Escrow, title & closing logistics</h2>
+                    <div class="card-status"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    <svg class="collapse-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </div>
+                <div class="card-body">
+                    <div class="checklist-items">
+                        <div class="checklist-item has-subitems" data-group="8-1">
+                            <input type="checkbox" id="item-8-1" onchange="toggleSubitems(this); updateProgress()">
+                            <label for="item-8-1">Confirm escrow timeline and remote signing options (mobile notary, eNotary).</label>
+                        </div>
+                        <div class="subitems" id="subitems-8-1">
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-8-1a" onchange="updateProgress()">
+                                <label for="item-8-1a">Confirm the escrow closing date aligns with your PCS timeline and any TLA expiration.</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-8-1b" onchange="updateProgress()">
+                                <label for="item-8-1b">If not using POA, arrange a mobile notary at your overseas location for document signing, or verify RON (Remote Online Notarization) availability.</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-8-1c" onchange="updateProgress()">
+                                <label for="item-8-1c">Confirm which documents must be wet-signed versus e-signed, and plan overnight courier delivery if needed.</label>
+                            </div>
+                        </div>
+                        <div class="checklist-item has-subitems" data-group="8-2">
+                            <input type="checkbox" id="item-8-2" onchange="toggleSubitems(this); updateProgress()">
+                            <label for="item-8-2">Use secure wiring procedures and verify title insurance details.</label>
+                        </div>
+                        <div class="subitems" id="subitems-8-2">
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-8-2a" onchange="updateProgress()">
+                                <label for="item-8-2a">Never wire funds based solely on email instructions — always call the title company at a verified phone number to confirm wiring details.</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-8-2b" onchange="updateProgress()">
+                                <label for="item-8-2b">Review the Closing Disclosure (CD) at least 3 business days before closing to compare against your Loan Estimate.</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-8-2c" onchange="updateProgress()">
+                                <label for="item-8-2c">Confirm your title insurance policy covers the full purchase price and understand what is and isn't covered.</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checklist-card" data-card="9">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <div class="card-number">9</div>
+                    <h2>Property management / interim housing</h2>
+                    <div class="card-status"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    <svg class="collapse-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </div>
+                <div class="card-body">
+                    <div class="checklist-items">
+                        <div class="checklist-item has-subitems" data-group="9-1">
+                            <input type="checkbox" id="item-9-1" onchange="toggleSubitems(this); updateProgress()">
+                            <label for="item-9-1">Arrange property management or short-term rental options if you'll be away or need to rent the property.</label>
+                        </div>
+                        <div class="subitems" id="subitems-9-1">
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-9-1a" onchange="updateProgress()">
+                                <label for="item-9-1a">If your PCS timeline doesn't allow immediate move-in, explore short-term furnished rentals or extended-stay hotels near your new duty station.</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-9-1b" onchange="updateProgress()">
+                                <label for="item-9-1b">If you plan to rent out the property, interview at least 2-3 property management companies and compare fees, services, and tenant screening processes.</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-9-1c" onchange="updateProgress()">
+                                <label for="item-9-1c">Research local rental rates and vacancy trends to set realistic income expectations if leasing.</label>
+                            </div>
+                        </div>
+                        <div class="checklist-item has-subitems" data-group="9-2">
+                            <input type="checkbox" id="item-9-2" onchange="toggleSubitems(this); updateProgress()">
+                            <label for="item-9-2">Coordinate movers and storage for timing mismatches.</label>
+                        </div>
+                        <div class="subitems" id="subitems-9-2">
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-9-2a" onchange="updateProgress()">
+                                <label for="item-9-2a">If your household goods (HHG) won't arrive in time, arrange for short-term storage and pack an essentials box with items you'll need immediately.</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-9-2b" onchange="updateProgress()">
+                                <label for="item-9-2b">Confirm storage-in-transit (SIT) options with your military moving company — you may be entitled to up to 90 days of temporary storage.</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checklist-card" data-card="10">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <div class="card-number">10</div>
+                    <h2>Moving & utilities setup</h2>
+                    <div class="card-status"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    <svg class="collapse-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </div>
+                <div class="card-body">
+                    <div class="checklist-items">
+                        <div class="checklist-item has-subitems" data-group="10-1">
+                            <input type="checkbox" id="item-10-1" onchange="toggleSubitems(this); updateProgress()">
+                            <label for="item-10-1">Coordinate international movers and estimate delivery windows.</label>
+                        </div>
+                        <div class="subitems" id="subitems-10-1">
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-10-1a" onchange="updateProgress()">
+                                <label for="item-10-1a">Confirm your military moving company's pickup date, estimated delivery window, and tracking number for your shipment.</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-10-1b" onchange="updateProgress()">
+                                <label for="item-10-1b">Ship critical documents (passports, birth certificates, orders, medical records) separately as carry-on — never in household goods.</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-10-1c" onchange="updateProgress()">
+                                <label for="item-10-1c">Review your inventory sheet at pickup and note any pre-existing damage on your belongings before signing.</label>
+                            </div>
+                        </div>
+                        <div class="checklist-item has-subitems" data-group="10-2">
+                            <input type="checkbox" id="item-10-2" onchange="toggleSubitems(this); updateProgress()">
+                            <label for="item-10-2">Schedule utility activations (electric, water, internet) to align with arrival.</label>
+                        </div>
+                        <div class="subitems" id="subitems-10-2">
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-10-2a" onchange="updateProgress()">
+                                <label for="item-10-2a">Call or schedule online utility transfers 2-3 weeks before your move-in date to avoid gaps in service.</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-10-2b" onchange="updateProgress()">
+                                <label for="item-10-2b">Set up internet service as a priority — you'll need it for work, communication, and managing remaining logistics.</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-10-2c" onchange="updateProgress()">
+                                <label for="item-10-2c">Check if the property uses trash/recycling services through the city or a private provider and set up accordingly.</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checklist-card" data-card="11">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <div class="card-number">11</div>
+                    <h2>Communication & documentation flow</h2>
+                    <div class="card-status"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    <svg class="collapse-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </div>
+                <div class="card-body">
+                    <div class="checklist-items">
+                        <div class="checklist-item has-subitems" data-group="11-1">
+                            <input type="checkbox" id="item-11-1" onchange="toggleSubitems(this); updateProgress()">
+                            <label for="item-11-1">Establish primary contact method (email, WhatsApp) and update cadence.</label>
+                        </div>
+                        <div class="subitems" id="subitems-11-1">
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-11-1a" onchange="updateProgress()">
+                                <label for="item-11-1a">Agree on a primary communication channel with your agent (email for formal documents, WhatsApp/text for quick updates).</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-11-1b" onchange="updateProgress()">
+                                <label for="item-11-1b">Set expectations for response times considering time zone differences — define your preferred contact hours.</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-11-1c" onchange="updateProgress()">
+                                <label for="item-11-1c">Request a weekly status email summarizing all active items, upcoming deadlines, and pending decisions.</label>
+                            </div>
+                        </div>
+                        <div class="checklist-item has-subitems" data-group="11-2">
+                            <input type="checkbox" id="item-11-2" onchange="toggleSubitems(this); updateProgress()">
+                            <label for="item-11-2">Use secure file sharing for forms and signed documents.</label>
+                        </div>
+                        <div class="subitems" id="subitems-11-2">
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-11-2a" onchange="updateProgress()">
+                                <label for="item-11-2a">Create a dedicated email folder or cloud drive (Google Drive, Dropbox) to organize all transaction documents in one place.</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-11-2b" onchange="updateProgress()">
+                                <label for="item-11-2b">Use e-signature platforms (DocuSign, Dotloop) approved by your lender and title company for secure document execution.</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-11-2c" onchange="updateProgress()">
+                                <label for="item-11-2c">Never share sensitive personal information (SSN, bank account numbers) over unencrypted email or text — use secure portals only.</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checklist-card" data-card="12">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <div class="card-number">12</div>
+                    <h2>Risk mitigation & fraud prevention</h2>
+                    <div class="card-status"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    <svg class="collapse-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </div>
+                <div class="card-body">
+                    <div class="checklist-items">
+                        <div class="checklist-item has-subitems" data-group="12-1">
+                            <input type="checkbox" id="item-12-1" onchange="toggleSubitems(this); updateProgress()">
+                            <label for="item-12-1">Verify escrow/title instructions by calling known numbers, not via email alone.</label>
+                        </div>
+                        <div class="subitems" id="subitems-12-1">
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-12-1a" onchange="updateProgress()">
+                                <label for="item-12-1a">Wire fraud is the #1 threat in real estate transactions — scammers can spoof email addresses and mimic legitimate title company correspondence.</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-12-1b" onchange="updateProgress()">
+                                <label for="item-12-1b">Always call the title company or escrow officer at a phone number you verified independently — never use numbers provided in email instructions.</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-12-1c" onchange="updateProgress()">
+                                <label for="item-12-1c">Be suspicious of any last-minute changes to wiring instructions — legitimate changes are extremely rare and should always be verified by phone.</label>
+                            </div>
+                        </div>
+                        <div class="checklist-item has-subitems" data-group="12-2">
+                            <input type="checkbox" id="item-12-2" onchange="toggleSubitems(this); updateProgress()">
+                            <label for="item-12-2">Never wire to personal accounts; confirm wiring instructions through verified channels.</label>
+                        </div>
+                        <div class="subitems" id="subitems-12-2">
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-12-2a" onchange="updateProgress()">
+                                <label for="item-12-2a">Legitimate closing funds are wired only to a verified escrow or title company account — never to a personal or individual account.</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-12-2b" onchange="updateProgress()">
+                                <label for="item-12-2b">Confirm the wire amount matches your Closing Disclosure exactly before initiating the transfer.</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-12-2c" onchange="updateProgress()">
+                                <label for="item-12-2c">Notify your bank of the upcoming wire in advance, especially for international transfers that may require additional documentation or take longer to process.</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checklist-card" data-card="13">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <div class="card-number">13</div>
+                    <h2>Contingency planning</h2>
+                    <div class="card-status"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    <svg class="collapse-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </div>
+                <div class="card-body">
+                    <div class="checklist-items">
+                        <div class="checklist-item has-subitems" data-group="13-1">
+                            <input type="checkbox" id="item-13-1" onchange="toggleSubitems(this); updateProgress()">
+                            <label for="item-13-1">Create backup plans for delayed shipments or closings (temporary rental, storage).</label>
+                        </div>
+                        <div class="subitems" id="subitems-13-1">
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-13-1a" onchange="updateProgress()">
+                                <label for="item-13-1a">Identify 2-3 short-term rental options or extended-stay hotels in your target area in case your closing is delayed or HHG arrives late.</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-13-1b" onchange="updateProgress()">
+                                <label for="item-13-1b">Discuss with your agent whether the seller would grant a closing extension or rent-back agreement if timelines slip.</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-13-1c" onchange="updateProgress()">
+                                <label for="item-13-1c">Keep an emergency fund accessible for unexpected costs like temporary housing, additional storage, or last-minute travel.</label>
+                            </div>
+                        </div>
+                        <div class="checklist-item has-subitems" data-group="13-2">
+                            <input type="checkbox" id="item-13-2" onchange="toggleSubitems(this); updateProgress()">
+                            <label for="item-13-2">Set decision thresholds for postponing or withdrawing offers.</label>
+                        </div>
+                        <div class="subitems" id="subitems-13-2">
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-13-2a" onchange="updateProgress()">
+                                <label for="item-13-2a">Define the maximum number of days past your target closing date that you're willing to wait before exercising your contingencies to exit the contract.</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-13-2b" onchange="updateProgress()">
+                                <label for="item-13-2b">Set a dollar threshold for repair negotiations — if the seller won't address issues above this amount, be prepared to walk.</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-13-2c" onchange="updateProgress()">
+                                <label for="item-13-2c">Understand your VA loan's escape clause rights — you can withdraw without penalty if the property doesn't appraise at or above the purchase price.</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checklist-card" data-card="14">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <div class="card-number">14</div>
+                    <h2>Post-close actions</h2>
+                    <div class="card-status"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    <svg class="collapse-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </div>
+                <div class="card-body">
+                    <div class="checklist-items">
+                        <div class="checklist-item has-subitems" data-group="14-1">
+                            <input type="checkbox" id="item-14-1" onchange="toggleSubitems(this); updateProgress()">
+                            <label for="item-14-1">Update change of address and confirm keys/lockbox access.</label>
+                        </div>
+                        <div class="subitems" id="subitems-14-1">
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-14-1a" onchange="updateProgress()">
+                                <label for="item-14-1a">File a change of address with USPS and update your DEERS record, DFAS, and any relevant military support offices.</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-14-1b" onchange="updateProgress()">
+                                <label for="item-14-1b">Confirm how and when you'll receive all keys, garage openers, access codes, and alarm system information from your agent or the seller.</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-14-1c" onchange="updateProgress()">
+                                <label for="item-14-1c">Update your voter registration, driver's license, and vehicle registration per your new state's requirements and military exemptions.</label>
+                            </div>
+                        </div>
+                        <div class="checklist-item has-subitems" data-group="14-2">
+                            <input type="checkbox" id="item-14-2" onchange="toggleSubitems(this); updateProgress()">
+                            <label for="item-14-2">Schedule move-in inspections and any vendor work needed after closing.</label>
+                        </div>
+                        <div class="subitems" id="subitems-14-2">
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-14-2a" onchange="updateProgress()">
+                                <label for="item-14-2a">Conduct a final walkthrough before your closing date to confirm the property is in the agreed-upon condition and all repairs are completed.</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-14-2b" onchange="updateProgress()">
+                                <label for="item-14-2b">Schedule any post-closing work such as deep cleaning, locksmith services, HVAC maintenance, or pest treatment before your belongings arrive.</label>
+                            </div>
+                            <div class="checklist-item">
+                                <input type="checkbox" id="item-14-2c" onchange="updateProgress()">
+                                <label for="item-14-2c">Take dated photos and video of the property's condition at move-in for your records and future reference when you eventually sell.</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Clayton VanTol | Real Estate Referrals | eXp Realty | 30 April 2026</p>
+        </div>
+    </footer>
+
+    <script>
+        const STORAGE_KEY = 'remoteBuyChecklist';
+
+        function loadState() {
+            try {
+                const saved = localStorage.getItem(STORAGE_KEY);
+                if (saved) {
+                    const state = JSON.parse(saved);
+                    Object.keys(state).forEach(id => {
+                        const cb = document.getElementById(id);
+                        if (cb) cb.checked = state[id];
+                    });
+                }
+            } catch (e) {}
+            document.querySelectorAll('.checklist-item.has-subitems').forEach(parent => {
+                const checkbox = parent.querySelector('input[type="checkbox"]');
+                if (checkbox && checkbox.checked) {
+                    const group = parent.dataset.group;
+                    const subitems = document.getElementById('subitems-' + group);
+                    if (subitems) subitems.classList.add('expanded');
+                }
+            });
+            updateProgress();
+        }
+
+        function saveState() {
+            const state = {};
+            document.querySelectorAll('.checklist-item input[type="checkbox"]').forEach(cb => {
+                state[cb.id] = cb.checked;
+            });
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+        }
+
+        function updateProgress() {
+            const cards = document.querySelectorAll('.checklist-card');
+            let completedSections = 0;
+            let totalItems = 0;
+            let checkedItems = 0;
+
+            cards.forEach(card => {
+                const checkboxes = card.querySelectorAll('input[type="checkbox"]');
+                const cardChecked = Array.from(checkboxes).filter(cb => cb.checked).length;
+                const cardTotal = checkboxes.length;
+                totalItems += cardTotal;
+                checkedItems += cardChecked;
+
+                if (cardTotal > 0 && cardChecked === cardTotal) {
+                    completedSections++;
+                    card.classList.add('completed');
+                    card.querySelector('.card-status').classList.add('complete');
+                } else {
+                    card.classList.remove('completed');
+                    card.querySelector('.card-status').classList.remove('complete');
+                }
+            });
+
+            const percent = totalItems > 0 ? Math.round((checkedItems / totalItems) * 100) : 0;
+            document.getElementById('progressFill').style.width = percent + '%';
+            document.getElementById('completedText').textContent = completedSections + ' of ' + cards.length + ' sections complete';
+            document.getElementById('percentText').textContent = percent + '%';
+
+            saveState();
+        }
+
+        function toggleCard(header) {
+            const card = header.closest('.checklist-card');
+            card.classList.toggle('open');
+        }
+
+        function toggleSubitems(checkbox) {
+            const group = checkbox.closest('.has-subitems').dataset.group;
+            const subitems = document.getElementById('subitems-' + group);
+            if (checkbox.checked) {
+                subitems.classList.add('expanded');
+            } else {
+                subitems.classList.remove('expanded');
+            }
+        }
+
+        loadState();
+    </script>
+</body>
+</html>
