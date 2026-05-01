@@ -1095,7 +1095,7 @@
     <!-- #region FOOTER -->
     <footer>
         <div class="container">
-            <p>Clayton VanTol | Find a Real Estate Agent | eXp Realty | 30 April 2026</p>
+            <p>Clayton VanTol | Find a Real Estate Agent | eXp Realty | 1 May 2026</p>
         </div>
     </footer>
     <!-- #endregion -->
@@ -1103,9 +1103,7 @@
     <script src="script.js"></script>
     <script>
         function startFunnel(type) {
-            // Facebook Tracking Start
-            fbq('track', 'InitiateCheckout');
-            // Facebook Tracking End
+
             
             // Hide landing sections and hero
             document.querySelectorAll('.landing-section').forEach(function(section) {
@@ -1130,8 +1128,14 @@
                 const timelineQuestion = document.getElementById('timelineQuestion');
                 if (type === 'Buy') {
                     timelineQuestion.textContent = 'When do you intend to buy?';
+                    if (typeof fbq === 'function') {
+                        fbq('track', 'ViewContent', {content_ids: ["Buy_Click"]});
+                    }
                 } else if (type === 'Sell') {
                     timelineQuestion.textContent = 'When do you intend to sell?';
+                    if (typeof fbq === 'function') {
+                        fbq('track', 'ViewContent', {content_ids: ["Sell_Click"]});
+                    }
                 }
                 
                 // Enable the Continue button for step 1 since we've already selected
