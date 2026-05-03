@@ -734,9 +734,17 @@
             <p class="page-hero-subtitle">Find a Real Estate Agent</p>
             <h1>Military coming home from overseas?</h1>
             <p class="page-hero-description">After completing the quick form, you will receive a free PCS Planning Pack (a personalized shortlist of 1-2 VA-savvy local agents and a remote-buy checklist) so you can choose trusted local representation and a clear remote-buy plan before arrival-without risking scams, missed timelines, or VA-loan confusion.</p>
-            <p class="page-hero-subtitle">Are you buying or selling a home?</p>
-            <button class="btn btn-gold hero-action-btn" style="min-width: 170px; padding: 2rem 2rem; font-size: 2rem;" onclick="startFunnel('Buy')">Buying</button>
-            <button class="btn btn-gold hero-action-btn" style="min-width: 170px; padding: 2rem 2rem; font-size: 2rem;" onclick="startFunnel('Sell')">Selling</button>
+            <p class="page-hero-subtitle" id="buy-or-sell">Are you buying or selling a home?</p>
+            
+            <button class="btn btn-gold hero-action-btn" id="buy-button-main" style="min-width: 170px; padding: 2rem 2rem; font-size: 2rem;" onclick="startFunnel('Buy');
+                if (typeof fbq === 'function') {
+                    fbq('track', 'ViewContent', {content_ids: [ 'Are you buying or selling a home?' ], contents: [ 'Buying' ]} )
+                };">Buying</button>
+            
+            <button class="btn btn-gold hero-action-btn" id="sell-button-main" style="min-width: 170px; padding: 2rem 2rem; font-size: 2rem;" onclick="startFunnel('Sell');
+                if (typeof fbq === 'function') {
+                    fbq('track', 'ViewContent', {content_ids: [ 'Are you buying or selling a home?' ], contents: [ 'Selling' ]} )
+                };">Selling</button>
         </div>
     </section>
     <!-- #endregion -->
@@ -877,7 +885,24 @@
                         <input type="hidden" name="transactionType" id="transactionType">
                         <div class="btn-row">
                             <button type="button" class="btn btn-secondary" onclick="prevStep(1)">Back</button>
-                            <button type="button" class="btn btn-primary" id="btn1" disabled onclick="nextStep(1)">Continue</button>
+                            <!-- FB tracking in the button's onclick function -->
+                            <button 
+                                type="button" 
+                                class="btn btn-primary" 
+                                id="btn1" 
+                                disabled 
+                                onclick="nextStep(1);
+                                        if (typeof fbq === 'function') {
+                                            fbq('track', 'ViewContent', {
+                                                content_ids: [ 
+                                                    'When do you intend to buy or sell?' 
+                                                ], 
+                                                contents: [ 
+                                                    document.getElementById('timeline').value 
+                                                ]
+                                            });
+                                        }"
+                            >Continue</button>
                         </div>
                     </div>
                     <!-- #endregion -->
@@ -906,7 +931,24 @@
                         <input type="hidden" name="financing" id="financing">
                         <div class="btn-row">
                             <button type="button" class="btn btn-secondary" onclick="prevStep(2)">Back</button>
-                            <button type="button" class="btn btn-primary" id="btn2" disabled onclick="nextStep(2)">Continue</button>
+                            <!-- FB tracking in the button's onclick function -->
+                            <button 
+                                type="button" 
+                                class="btn btn-primary" 
+                                id="btn2" 
+                                disabled 
+                                onclick="nextStep(2);
+                                        if (typeof fbq === 'function') {
+                                            fbq('track', 'ViewContent', {
+                                                content_ids: [ 
+                                                    'What is your financing status?' 
+                                                ], 
+                                                contents: [ 
+                                                    document.getElementById('financing').value 
+                                                ]
+                                            });
+                                }"
+                            >Continue</button>
                         </div>
                     </div>
                     <!-- #endregion -->
@@ -937,7 +979,24 @@
                         <input type="hidden" name="priceRange" id="priceRange">
                         <div class="btn-row">
                             <button type="button" class="btn btn-secondary" onclick="prevStep(3)">Back</button>
-                            <button type="button" class="btn btn-primary" id="btn3" disabled onclick="nextStep(3)">Continue</button>
+                            <!-- FB tracking in the button's onclick function -->
+                            <button
+                                type="button" 
+                                class="btn btn-primary" 
+                                id="btn3" 
+                                disabled 
+                                onclick="nextStep(3);
+                                        if (typeof fbq === 'function') {
+                                            fbq('track', 'ViewContent', {
+                                                content_ids: [ 
+                                                    'What is your desired price range?' 
+                                                ], 
+                                                contents: [ 
+                                                    document.getElementById('priceRange').value 
+                                                ]
+                                            });
+                                        }"
+                            >Continue</button>
                         </div>
                     </div>
                     <!-- #endregion -->
@@ -970,7 +1029,24 @@
                         <input type="hidden" name="propertyType" id="propertyType">
                         <div class="btn-row">
                             <button type="button" class="btn btn-secondary" onclick="prevStep(4)">Back</button>
-                            <button type="button" class="btn btn-primary" id="btn4" disabled onclick="nextStep(4)">Continue</button>
+                            <!-- FB tracking in the button's onclick function -->
+                            <button 
+                                type="button" 
+                                class="btn btn-primary" 
+                                id="btn4" 
+                                disabled 
+                                onclick="nextStep(4);
+                                        if (typeof fbq === 'function') {
+                                            fbq('track', 'ViewContent', {
+                                                content_ids: [ 
+                                                    'What type of property?' 
+                                                ], 
+                                                contents: [ 
+                                                    document.getElementById('propertyType').value 
+                                                ]
+                                            });
+                                        }"
+                            >Continue</button>
                         </div>
                     </div>
                     <!-- #endregion -->
@@ -988,7 +1064,26 @@
                         </div>
                         <div class="btn-row">
                             <button type="button" class="btn btn-secondary" onclick="prevStep(5)">Back</button>
-                            <button type="button" class="btn btn-primary" id="btn5" disabled onclick="nextStep(5)">Continue</button>
+                            <!-- FB tracking in the button's onclick function -->
+                            <button 
+                                type="button"
+                                class="btn btn-primary"
+                                id="btn5"
+                                disabled
+                                onclick="nextStep(5);
+                                        if (typeof fbq === 'function') {
+                                            fbq('track', 'ViewContent', {
+                                                content_ids: [
+                                                    'What is your target city?',
+                                                    'What is your current address?'
+                                                ],
+                                                contents: [
+                                                    document.getElementById('location').value,
+                                                    document.getElementById('currentAddress').value
+                                                ]
+                                            });
+                                        }"
+                            >Continue</button>
                         </div>
                     </div>
                     <!-- #endregion -->
@@ -1023,7 +1118,25 @@
                         </div>
                         <div class="btn-row">
                             <button type="button" class="btn btn-secondary" onclick="prevStep(6)">Back</button>
-                            <button type="button" class="btn btn-primary" id="btn6" disabled onclick="nextStep(6)">Continue</button>
+                            <!-- FB tracking in the button's onclick function -->
+                            <button
+                                type="button"
+                                class="btn btn-primary"
+                                id="btn6"
+                                disabled
+                                onclick="nextStep(6);
+                                        if (typeof fbq === 'function') {
+                                            fbq('track', 'ViewContent', {
+                                                content_ids: [
+                                                    'Best Contact Time?'
+                                                ],
+                                                contents: [
+                                                    document.getElementById('contactMethod').value,
+                                                    document.getElementById('bestContactTime').value
+                                                ]
+                                            });
+                                        }"
+                            >Continue</button>
                         </div>
                     </div>
                     <!-- #endregion -->
@@ -1063,8 +1176,32 @@
                         </div>
                         <div class="btn-row">
                             <button type="button" class="btn btn-secondary" onclick="prevStep(7)">Back</button>
-                            <!--Facebook Lead Tracking added inline to button's onclick-->
-                            <button type="button" class="btn btn-primary" id="btn7" onclick="submitForm(); if (typeof fbq === 'function') {fbq('track', 'Lead')}">Get Matched!</button>
+                            <!-- FB tracking in the button's onclick function -->
+                            <button
+                                type="button"
+                                class="btn btn-primary"
+                                id="btn7"
+                                onclick="submitForm();
+                                        if (typeof fbq === 'function') {
+                                            fbq('track', 'Lead', {
+                                            content_ids: [
+                                                'First Name',
+                                                'Last Name',
+                                                'Email',
+                                                'Phone Number',
+                                                'How did you hear about me?',
+                                                'Consent'
+                                            ],
+                                            contents: [
+                                                document.getElementById('firstName').value,
+                                                document.getElementById('lastName').value,
+                                                document.getElementById('email').value,
+                                                document.getElementById('phone').value,
+                                                document.getElementById('howHeard').value,
+                                                document.getElementById('consent').value
+                                            ]});
+                                        }"
+                            >Get Matched!</button>
                         </div>
                     </div>
                     <!-- #endregion -->
@@ -1097,7 +1234,7 @@
             </div>
         </div>
     </section>
-    <!-- #endregion -->
+    <!-- #endregion FUNNEL SECTION -->
     <!-- #region CONTACT SECTION (always visible below funnel) -->
     <section class="contact-section">
         <div class="container">
@@ -1175,18 +1312,13 @@
                 const timelineQuestion = document.getElementById('timelineQuestion');
                 if (type === 'Buy') {
                     timelineQuestion.textContent = 'When do you intend to buy?';
-                    if (typeof fbq === 'function') {
-                        fbq('track', 'ViewContent', {content_ids: ["Buy_Click"]});
-                    }
                 } else if (type === 'Sell') {
                     timelineQuestion.textContent = 'When do you intend to sell?';
-                    if (typeof fbq === 'function') {
-                        fbq('track', 'ViewContent', {content_ids: ["Sell_Click"]});
-                    }
-                }
+                };
                 
                 // Enable the Continue button for step 1 since it's already selected
                 document.getElementById('btn1').disabled = false;
+
             }
             
             // Scroll to funnel
